@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ludo-upgraded.css">
+</head>
+<body>
+    <div class="outer-main">
+    <div class="main">
+        <!-- blue home -->
+        <div id="blue-home">
+            <div class="circle blue-circle">
+                <div  class="small-white-circles circle1"><div id="ludo-piece-blue"></div></div>
+                <div class="small-white-circles circle2"></div>
+                <div class="small-white-circles circle3"></div>
+                <div class="small-white-circles circle4"></div>
+            </div>
+        </div>
+
+        <!-- start pathway -->
+        <div class="pathway-vertical">
+            <div class="path" id="corner-1" data-blue="step1">3</div>
+            <div class="path" id="step2"></div>
+            <div class="path" id="step3"></div>
+            <div class="path"></div>
+            <div class="path"></div>
+            <div class="path"></div>
+            <!-- <div class="path"></div>
+            <div class="path"></div>
+            <div class="path"></div> -->
+        </div>
+<!-- middle pathway -->
+        <div class=" pathway-vertical-mid">
+          <div class="path-vertical-mid"></div>
+          <div class="path-vertical-mid path-orange" data-orange="step"></div>
+          <div class="path-vertical-mid path-orange"></div>
+          <div class="path-vertical-mid path-orange"></div>
+          <div class="path-vertical-mid path-orange"></div>
+          <div class="path-vertical-mid path-orange"></div>
+          <!-- <div class="path-vertical-mid path-orange"></div>
+          <div class="path-vertical-mid path-orange"></div>
+          <div class="path-vertical-mid path-orange"></div> -->
+        </div>
+        <!-- end pathway -->
+        <div class="pathway-vertical2">
+            <div class="path-vertical-mid" id="corner-2">4</div>
+            <div class="path-vertical-mid path-orange arrow"><div class="arrow-down"></div></div>
+            <div class="path-vertical-mid"></div>
+            <div class="path-vertical-mid"></div>
+            <div class="path-vertical-mid"></div>
+            <div class="path-vertical-mid" id="corner-top-bottom-right">3</div>
+            <!-- <div class="path-vertical-mid"></div>
+            <div class="path-vertical-mid"></div>
+            <div class="path-vertical-mid"></div> -->
+        </div>
+        <!-- orange home -->
+        <div id="orange-home">
+            <div class="circle orange-circle">
+                <div   class="small-white-circles circle1"></div>
+                <div class="small-white-circles circle2"></div>
+                <div class="small-white-circles circle3"></div>
+                <div class="small-white-circles circle4"></div>
+            </div>
+        </div>
+        <!-- left first horizontal path -->
+        <div class="pathway-horizontal">
+            <div class="path path-horzontal" id="corner-11">f</div>
+            <div class="path path-horzontal path-blue arrow"><div class="arrow-left"></div></div>
+            <div class="path path-horzontal"></div>
+            <div class="path path-horzontal"></div>
+            <div class="path path-horzontal"></div>
+            <div class="path path-horzontal" id="corner-12">f</div>
+            
+        </div>
+        <!-- center left horizontal pathway -->
+        <div class="pathway-horizontal-mid">
+            <div class="path path-horzontal-mid" id="blue-home-entrance">win</div>
+            <div class="path path-horzontal-mid path-blue"></div>
+            <div class="path path-horzontal-mid path-blue"></div>
+            <div class="path path-horzontal-mid path-blue"></div>
+            <div class="path path-horzontal-mid path-blue"></div>
+            <div class="path path-horzontal-mid path-blue"></div>
+        </div>
+        <!-- end left horizontal pathway -->
+        <div class="pathway-horizontal2">
+            <div class="path path-horzontal" id="corner-10">f</div>
+            <div class="path path-horzontal "></div>
+            <div class="path path-horzontal"></div>
+            <div class="path path-horzontal"></div>
+            <div class="path path-horzontal"></div>
+            <div class="path path-horzontal"></div>
+        </div>
+        <div class="box">
+            <div class="top-left"></div>
+            <div class="top-right"></div>
+            <div class="bottom-left"></div>
+            <div class="bottom-right"></div>
+        </div>
+        <div class="end-pathway-horizontal">
+    <div class="path path-end-horizontal "></div>
+    <div class="path path-end-horizontal "></div>
+    <div class="path path-end-horizontal "></div>
+    <div class="path path-end-horizontal "></div>
+    <div class="path path-end-horizontal "></div>
+    <div class="path path-end-horizontal " id="corner-3">f</div>        
+    </div>
+    <div class="end-pathway-horizontal-mid">
+        
+        <div class="path path-horzontal-mid path-green"></div>
+        <div class="path path-horzontal-mid path-green"></div>
+        <div class="path path-horzontal-mid path-green"></div>
+        <div class="path path-horzontal-mid path-green"></div>
+        <div class="path path-horzontal-mid path-green"></div>
+        <div class="path path-horzontal-mid"></div>
+    </div>
+      <div class="end-pathway-horizontal-end">
+        <div class="path path-horzontal" id="corner-5">f</div>
+            
+            <div class="path path-horzontal"></div>
+            <div class="path path-horzontal"></div>
+            <div class="path path-horzontal"></div>
+            <div class="path path-horzontal path-green arrow" ><div class="arrow-right"></div></div>
+            <div class="path path-horzontal" id="corner-4">f</div>
+      </div>
+      <div id="yellow-home">
+        <div class="circle yellow-circle">
+            <div class="small-white-circles circle1"></div>
+            <div class="small-white-circles circle2"></div>
+            <div class="small-white-circles circle3"></div>
+            <div class="small-white-circles circle4"></div>
+        </div>
+    </div>
+    <div class="pathway-vertical-end">
+        <div class="path path-horzontal" style="border-top: 2px solid black;" id="corner-8">f</div>
+        
+        <div class="path path-horzontal"></div>
+        <div class="path path-horzontal"></div>
+        <div class="path path-horzontal"></div>
+        <div class="path path-horzontal path-yellow arrow"><div class="arrow-up"></div></div>
+        <div class="path path-horzontal" style="border-bottom: none;" id="corner-7">f</div>
+    </div>
+   <div class="pathway-vertical-end-mid">
+    <div class="path path-vertical-mid path-yellow " style="border-top: 2px solid black;"></div>
+    <div class="path path-vertical-mid path-yellow"></div>
+    <div class=" path path-vertical-mid path-yellow"></div>
+    <div class=" path path-vertical-mid path-yellow "></div>
+    <div class="path path-vertical-mid path-yellow"></div>
+    <div class="path path-vertical-mid" style="border-bottom: none;"></div>
+   
+   </div>
+   <div class="pathway-vertical-end-end">
+    <div class="path path-horzontal" style="border-top: 2px solid black;"></div>
+        
+        <div class="path path-horzontal"></div>
+        <div class="path path-horzontal"></div>
+        <div class="path path-horzontal"></div>
+        <div class="path path-horzontal "></div>
+        <div class="path path-horzontal" style="border-bottom: none;" id="corner-6">f</div>
+   </div>
+   <div id="green-home">
+    <div class="circle green-circle">
+        <div class="small-white-circles circle1"></div>
+        <div class="small-white-circles circle2"></div>
+        <div class="small-white-circles circle3"></div>
+        <div class="small-white-circles circle4"></div>
+    </div>
+</div>
+</div>
+    </div>
+<button id="btn-orange"></button>
+<button id="btn-green"></button>
+<button id="btn-blue"></button>
+<button id="btn-yellow"></button>
+</body>
+
+<script src="ludo-upgraded.js"></script>
+</html>

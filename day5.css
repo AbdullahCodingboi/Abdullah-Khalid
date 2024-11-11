@@ -1,0 +1,339 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    
+
+
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    background-color: #2C363F;
+}
+.graph{
+    height: 250px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #FFFFFF;
+    grid-template-rows:75px repeat(4,44px) ;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #70A9A1;
+}
+.headings{
+    grid-row: 1/2;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #E75A7C;
+}
+
+h4{
+    position: relative;
+    left: 15px;
+    bottom: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+.line{
+    position: relative;
+    bottom: 25%;
+}
+#line2{
+    position: relative;
+    top: 10px;
+}
+hr{
+    align-self: end;
+    height: 0.2px;
+    width: 95%;
+    border: none;
+    background-color:rgb(216, 213, 213);
+}
+.heading-text{
+    position: relative;
+    left: 20px;
+    bottom: 20px;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+.revenue{
+    position: relative;
+    left: 230px;
+    bottom: 69px;
+    font-size: 13px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+.value{
+    position: relative;
+    left: 220px;
+    bottom: 85px;
+    padding-right: 10px;
+    /* font-size: 13px; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+.Views-tab{
+    position: relative;
+    grid-row: 2/3;
+    left: 155px;
+    bottom: 82%;
+    height: 5px;
+    width: 20px;
+    border-radius: 2px;
+    background-color:#E75A7C ;
+}
+.views{
+    grid-row: 2/3;
+    position: relative;
+    left: 180px;
+    bottom:118%;
+    padding-right: 10px;
+    /* font-size: 13px; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10px;
+}
+.Purchase-tab{
+    position: relative;
+    grid-row: 2/3;
+    left: 220px;
+    bottom: 153%;
+    height: 5px;
+    width: 20px;
+    border-radius: 2px;
+    background-color:#70A9A1 ;
+}
+.Purchases{
+    grid-row: 2/3;
+    position: relative;
+    left: 250px;
+    bottom:175%;
+    padding-right: 10px;
+    /* font-size: 13px; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 9px;
+}
+
+.pink-line{
+    grid-row: 3/5;
+    position: relative;
+    
+    background-color: #E75A7C;
+    height: 2px;
+    width: 70px;
+    transform-origin:bottom; 
+}
+.pink-line1{
+    bottom: 130%;
+    left: 1%;
+    transform: rotate(-30deg);
+    animation:pink-line1 2s  0s infinite;
+
+}
+.pink-line2{
+    transform: rotate(10deg);
+    position: relative;
+    bottom: 165%;
+    left: 23%;
+}
+.pink-point{
+    grid-row: 3/4;
+    position: relative;
+    bottom: 101%;
+    left: 2%;
+    background-color: #E75A7C;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
+.pink-point2{
+    grid-row: 3/4;
+    position: relative;
+    bottom: 166%;
+    left: 22%;
+    background-color: #E75A7C;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
+
+.pink-point3{
+    position: relative;
+    bottom: 166%;
+    left: 45%;
+}
+.pink-point4{
+    position: relative;
+    left: 58%;
+    bottom:128%;
+}
+.pink-line3{
+    grid-row: 3/4;
+    position: relative;
+    left: 44%;
+    bottom: 150%;
+    width: 50px;
+    transform: rotate(45deg);
+}
+.pink-line4{
+    transform: rotate(-45deg);
+    bottom: 164%;
+    left: 56%;
+}
+.pink-point5{
+    position: relative;
+    left: 74%;
+    bottom:205%;
+}
+.pink-line5{
+
+    transform: rotate(20deg);
+    bottom: 195%;
+    left: 75%;
+}
+.pink-point6{
+    position: relative;
+    left: 95%;
+    bottom:190%;
+}
+
+
+
+        /* Tooltip styling */
+        .tooltip {
+            visibility: hidden;
+            background-color:#E75A7C;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 2px;
+            position: absolute;
+            bottom: 150%; /* Position above the point */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+        }
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #E75A7C transparent transparent transparent;
+        }
+        .pink-point:hover .tooltip, 
+        .pink-point2:hover .tooltip, 
+        .pink-point3:hover .tooltip, 
+        .pink-point4:hover .tooltip, 
+        .pink-point5:hover .tooltip, 
+        .pink-point6:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+ .second-point{
+    position: relative;
+    bottom: 150%;
+    background-color: #70A9A1;
+ }
+.line2{
+    bottom: 180%;
+    left: 10px;
+    background-color: #70A9A1;
+}
+.third-point{
+    bottom: 210%;
+    background-color: #70A9A1;
+}
+.line3{
+    bottom: 210%;
+    left: 70px;
+    background-color: #70A9A1;
+}
+.fourth-point{
+    background-color: #70A9A1;
+    bottom: 210%;
+}
+.line4{
+    background-color: #70A9A1;
+    bottom: 199%;
+    left: 46%;
+    width: 30px;
+    
+}
+.fifth-point{
+    background-color: #70A9A1;
+    bottom: 195%;
+    left:155px;
+}
+.line5{
+    background-color: #70A9A1;
+    bottom: 230%;
+    left: 158px;
+    width: 72px;
+    transform: rotate(-35deg);
+}
+.sixth-point{
+    background-color: #70A9A1;
+    bottom: 266%;
+}
+.line6{
+    background-color: #70A9A1;
+    bottom: 256%;
+}
+.seventh-point{
+    background-color: #70A9A1;
+    bottom: 251%;
+}
+.days{
+    position: relative;
+    display: flex;
+    grid-row: 5/6;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #cec7c7;
+    margin-right: 5px;
+}
+.mon{
+    bottom: 245%;
+    left: 10px;
+}
+.tue{
+    bottom: 291%;
+    left: 60px;
+}
+.wed{
+    bottom: 338%;
+    left: 100px;
+}
+.thu{
+    bottom: 385%;
+    left: 140px;
+}
+.fri{
+    bottom: 431%;
+    left: 190px;
+}
+.sat{
+    bottom: 478%;
+    left: 228px;
+}
+.sun{
+    bottom: 524%;
+    left: 87%;
+}
+
+
+

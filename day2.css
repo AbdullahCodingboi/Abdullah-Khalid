@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 100vh;
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+    background: linear-gradient(to top right, purple,#7F007F,#BE2AED,#EFBBFF);
+}
+.line{
+    height: 10px;
+    width: 100px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 2px 5px 5px purple;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    border: none;
+    height: 50px;
+    width: 120px;
+    background:none;
+    cursor: pointer;
+}
+#line-two{
+    transition: width 1s ease, opacity 1s ease;
+}

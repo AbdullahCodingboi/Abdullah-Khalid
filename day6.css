@@ -1,0 +1,165 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    background:linear-gradient(to top right,indigo,purple,rgb(241, 105, 241));
+}
+.profile{
+    height: 300px;
+    width: 300px;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 220px 80px ;
+    grid-template-rows: repeat(3,100px);
+    background-color: #FFFFFF;
+    box-shadow: 4px 7px 7px rgb(29, 28, 28);
+    border-radius: 2px;
+}
+.profile-pics{
+    position: relative;
+    right: 10px;
+}
+.profile-pic{
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-bottom: 25px;
+    z-index: 2; 
+    position: relative;
+   
+    
+}
+
+  .circle1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+   position: relative;
+    border: 1px solid plum;
+    border-left: 1px solid transparent;
+    background-color: white;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+
+}
+
+  .circle2{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid plum;
+    border-right: 1px solid transparent;
+    background-color: white;
+    transition: 0.5s ease-in-out;
+    position: absolute;
+    z-index: 0;
+
+}
+  .heading{
+    display: flex;
+    flex-direction: column;
+    color: rgb(131, 62, 131);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    position: relative;
+    right:27px;
+    padding-left: 42px;
+    position: relative;
+    bottom: 25px;
+  }
+  .text{
+    position: relative;
+    font-size: 10px;
+    bottom: 25px;
+    right: 2px;
+  }
+  .button{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    gap: 10px;
+    background-color: #FFFFFF;
+    margin-bottom: 90px
+    
+  }
+  .buttons{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 100px;
+    border-radius: 10px;
+    border: 0.5px solid rgb(173, 91, 173);
+    color: rgb(173, 91, 173);
+    margin-right: 10px;
+  }
+  .stats{
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+    align-items: center;
+    background-color: plum;
+    
+    color: rgb(173, 91, 173);
+    height: 99%;
+    width: 99%;
+    border-bottom: 1px solid white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+  }
+.posts{
+  
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .likes{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .followers{
+    grid-column: 2/3;
+grid-row: 3/4;  
+border: none;
+}
+.buttons:hover{
+  background-color: plum;
+  color: #FFFFFF;
+}
+.profile-pic:hover ~ .circle1 {
+  transform: rotate(180deg);
+}
+
+.profile-pic:hover ~ .circle1 .circle2 {
+  transform: rotate(-180deg);
+}
+.stats:hover{
+  background: linear-gradient(to top  ,rgb(146, 44, 146), plum ,rgb(236, 193, 236));
+  color: #FFFFFF;
+}
+
+.circle1:hover {
+  transform: rotate(180deg);
+}
+
+.circle1:hover .circle2 {
+  transform: rotate(-180deg);
+}
