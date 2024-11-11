@@ -241,7 +241,9 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 #web{
-  font-size: smaller;
+    text-decoration: none;
+      cursor:pointer;
+
 
 }
 #Phone{
