@@ -8,129 +8,94 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Portfolio</title>
         <link rel="stylesheet" href="style.css">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="main">
+      
 
-            <div class="header">
-                <h3 class="logo">Abdullah Khalid</h3>
-                <h3 class="nav-icons"><a href="#sec1">Home</a></h3>
-                <h3 class="nav-icons nav-icons2"><a href="#sec2">Projects</a></h3>
-                <h3 class="nav-icons nav-icons3"><a href="#sec3">Contact</a></h3>
-                <button class="btn"><a href='#sec6'><h3 class="nav-icons">Hire Me</h3></a></button>
-            </div>
+            <div class='header'>
+                <h2>Abdullah Khalid</h2>
+                <div>
+                  <ul class="ul">
+                    <li class="li"><a href="#sec1" class='links'>Home</a></li>
+                    <li class="li"><a href="#sec2" class='links'>My Skills</a></li>
+                    <li class="li"><a href="#sec3" class='links'>Projects</a></li>
+                    <li class="li"><a href="#sec4" class='btn'>Hire Me</a></li>
+                  </ul>
+                </div>
+              </div>
             <section id="sec1">
-            <div class="front">
-                <img src="bgremoved.png" alt="profile-pic" class="image">
-                <div class="front-banner">
-                    <h1 class="fb-heading">I'm <b>Abdullah</b> <br> Front-end <br> Developer</h1>
-                    <h3 class="fb-text">I focus on building websites that are easy to use, functional, and visually appealing</h3>
-                </div>
-            </div>
+                <div class='main'>
+                    <div><img src="bgremoved.png" alt="" class='img' >
+                    </div>
+                    
+                    <div >
+                      <h1 class='heading'>I'm <strong style='color:#3B64B3'>Abdullah Khalid</strong>
+                I am a Front-end
+                Developer.
+               </h1>
+                    </div>
+                  </div>
 
         </section>
 
-        <section class="sec6">
-            <div class="expertise-container">
-                <div class="expertise-card">
-                    <h2 class="title">My Expertise</h2>
-                    <ul class="expertise-list">
-                        <li><strong>HTML:</strong> Advanced knowledge in structuring web pages with semantic HTML.</li>
-                        <li><strong>CSS:</strong> Expertise in creating responsive designs, layouts with Flexbox and Grid.</li>
-                        <li><strong>JavaScript:</strong> Proficient in DOM manipulation, events, and JavaScript frameworks.</li>
-                        <li><strong>React:</strong> Skilled in building dynamic UIs with React, using hooks and component-based architecture.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
         <section id="sec2">
-            <div class="projects">
-                <div class="project">
-                    <iframe id="myIframe" src="clock.html" width="400px" height="350px" style="border:none;"></iframe>
-                    <p class="description">A digital clock built with HTML, CSS, and JavaScript that displays the current time. It uses basic DOM manipulation and responsive design for a clean, modern look.</p>
-                </div>
-                <div class="project">
-                    <iframe id="myIframe2" src="day3.html" width="400px" height="350px" style="border:none;"></iframe>
-                    <p class="description">A CSS animation of a sun setting over a pyramid, with the sun gradually descending behind the pyramid as the background color changes to simulate dusk.</p>
-                </div>
-                <div class="project">
-                    <iframe id="myIframe3" src="day2.html" width="400px" height="350px" style="border:none;"></iframe>
-                    <p class="description">A menu button that toggles the visibility of a navigation menu using HTML, CSS, and JavaScript.</p>
-                </div>
-                <div class="project">
-                    <iframe id="myIframe4" src="day10.html" width="400px" height="370px" style="border:none;"></iframe>
-                    <p class="description">A stylish digital clock using HTML, CSS, and JavaScript, with a modern design.</p>
-                </div>
-                <div class="project">
-                    <iframe id="myIframe5" src="day7.html" width="400px" height="370px" style="border:none;"></iframe>
-                    <p class="description">A simple message UI built with HTML, CSS, and JavaScript for displaying in a clean, interactive layout.</p>
-                </div>
-                <div class="project">
-                    <iframe id="myIframe6" src="day5.html" width="400px" height="370px" style="border:none;"></iframe>
-                    <p class="description">A simple graph created with HTML, CSS, and JavaScript to visually represent data using bars, lines, or points.</p>
-                </div>
-                <div class="project">
-                    <iframe id="myIframe7" src="day6.html" width="400px" height="370px" style="border:none;"></iframe>
-                    <p class="description">A simple social media profile UI using HTML, CSS, and JavaScript, featuring a profile picture, bio, and posts in a clean, modern layout.</p>
-                </div>
-                <div class="project">
-                    <img id="myIframe8" src="minefiled.png" alt="">
-                    <p class="description">A game called <a class="project-a" href="https://abdullahcodingboi.github.io/MineField/">MineField</a>, and it’s a small puzzle game in which you need to find numbers to score and avoid mines, it is luck-based</p>
-                </div>
-                <div class="project">
-                    <img id="myIframe9" src="poptheballoon.png" alt="">
-                    <p class="description"><a class="project-a" href="https://abdullahcodingboi.github.io/PopTheBalloons/">Pop the Balloon </a>,is a simple interactive game made using JavaScript, HTML, and CSS</p>
-                </div>
-                <div class="project">
-                    <img id="myIframe10" src="smashTheBug.png" alt="">
-                    <p class="description"><a class="project-a" href="https://abdullahcodingboi.github.io/SmashTheBug/">Smash the bug</a> is an engaging game built with JavaScript, HTML, and CSS where players must click on bugs before they escape!</p>
-                </div>
-                <div class="project">
-                    <img id="myIframe11" src="calc.png" alt="">
-                    <p class="description">A simple calculator<a class="project-a" href="https://abdullahcodingboi.github.io/Calculator/"> calculator</a> built with JavaScript, HTML, and CSS</p>
-                </div>
-                <div class="project">
-                    <img id="myIframe12" src="desktop-design.jpg" alt="">
-                    <p class="description">A simple static<a class="project-a" href="https://abdullahcodingboi.github.io/Recipe-page/"> recipe</a> page built with HTML, and CSS</p>
-                </div>
-                <div class="project">
-                    <img id="myIframe12" src="Screenshot (3).png" alt="">
-                    <p class="description">A simple <a class="project-a" href="https://abdullahcodingboi.github.io/TicTacToe/"> TicTacToe</a> game built with HTML, CSS and JavaScript</p>
-                </div>
-                
-            </div>
-        </section>
-        <section id="sec6">
-           <h1 class="title"> <b>PERSONAL DETAILS</b> </h1>
-
-            <div class="profile-container">
-                <div class="profile-card">
-                    <h2 class="title">Front-end Developer</h2>
-                    <ul class="profile-list">
-                        <li><strong>Birthday:</strong> 28 March 2006</li>
-                        <li><strong>Website:</strong> <a href="#">My Website</a></li>
-                        <li><strong>Phone:</strong> 03465483006</li>
-                        <li><strong>City:</strong> Rawalpindi, Pakistan</li>
-                        <li><strong>E-mail:</strong> <a href="mailto:abdullahkhaled20006@gmail.com">abdullahkhaled20006@gmail.com</a></li>
-                    </ul>
+            <div class='outer'>
+                <div class="main-constainer">
+                  <h2>My Expertise</h2>
+                  <ul>
+                    <li><b>HTML: </b>Advanced knowledge in structuring web pages with semantic HTML.</li>
+                    <li><b>JavaScript: </b>Proficient in DOM manipulation, events, and JavaScript frameworks.</li>
+                    <li><b>CSS: </b>Expertise in creating responsive designs, layouts with Flexbox and Grid.</li>
+                    <li><b>React:</b> Skilled in building responsive UIs with Flexbox and Grid.</li>
+                  </ul>
                 </div>
             </div>
         </section>
-       
         <section id="sec3">
-            <footer>
-                <h1 class="Name About skill footer-text">Abdullah Khalid</h1>
-                <p class="footer-text">UI Developer, Frontend Developer, Freelancer</p>
-                <div class="socials">
-                <img class="icons_nav social_icons " src="instagram.svg" alt="">
-                <img class="icons_nav social_icons " src="whatsapp.svg" alt="">
+            <div class='block'>
+                <h1 style='color:#3F61BC;font-family:Roboto'>My Projects</h1>
+            <div class='main-outer'>
+                <div class='description'><iframe src="clock.html"></iframe><p class='text'>A digital clock built with HTML, CSS, and JavaScript that displays the current time. It uses basic DOM manipulation and responsive design for a clean, modern look.</p></div>
+                <div class='description'><iframe src="day3.html"></iframe><p class='text'>A CSS animation of a sun setting over a pyramid, with the sun gradually descending behind the pyramid as the background color changes to simulate dusk.</p></div>
+                <div class='description'><iframe src="day2.html"></iframe><p class="text">A menu button that toggles the visibility of a navigation menu using HTML, CSS, and JavaScript.</p></div>
+                <div class='description'><iframe src="day10.html"></iframe><p class="text">A stylish digital clock using HTML, CSS, and JavaScript, with a modern design.</p></div>
+                <div class='description'><iframe src="day5.html"></iframe><p class="text">A simple graph created with HTML, CSS, and JavaScript to visually represent data using bars, lines, or points.</p></div>
+                <div class='description'><iframe src="day7.html"></iframe><p class="text">A simple message UI built with HTML, CSS, and JavaScript for displaying in a clean, interactive layout.</p></div>
+                <div class='description'><iframe src="day6.html"></iframe><p class="text">A simple social media profile UI using HTML, CSS, and JavaScript, featuring a profile picture, bio, and posts in a clean, modern layout.</p></div>
+                <div class='description'><img src="smashTheBug.png" alt="" /><p class="text"><a href="https://abdullahcodingboi.github.io/SmashTheBug/">Smash the bug</a> is an engaging game built with JavaScript, HTML, and CSS where players must click on bugs before they escape!</p></div>
+                <div class='description'><img src="minefiled.png" alt="" /><p class="text">A game called <a href="https://abdullahcodingboi.github.io/MineField/">MineField</a> , and it’s a small puzzle game in which you need to find numbers to score and avoid mines, it is luck-based</p></div>
+                <div class='description'><img src="poptheballoon.png" alt="" /><p class="text"><a href="https://abdullahcodingboi.github.io/PopTheBalloons/">Pop the Balloon</a> ,is a simple interactive game made using JavaScript, HTML, and CSS</p></div>
+                <div class='description'><img src="Screenshot (3).png" alt="" /><p class="text">A simple <a href="https://abdullahcodingboi.github.io/TicTacToe/">TicTacToe</a>  game built with HTML, CSS and JavaScript</p></div>
+                <div class='description'><img src="calc.png" alt="" /><p>A simple <a href="https://abdullahcodingboi.github.io/Calculator/">calculator </a> built with JavaScript, HTML, and CSS</p></div>
+                <div class='description'><img src="desktop-design.jpg" alt="" /><p class="text">A simple static <a href="https://abdullahcodingboi.github.io/Recipe-page/">recipe page </a> built with HTML, and CSS</p></div>
             </div>
-                <p class="footer-text">©  All Rights Reserved.</p>
-            </footer>
+          </div>
         </section>
+        <section id="sec4">
+            <div>
+                <div class='outer' style='margin-top:30px'>
+               <div class="main-constainer" style='min-width:50%'>
+                 <h2 style='color:#2151B1'>PERSONAL DETAILS</h2>
+                 <ul style='display:flex;flex-direction:column;gap:10px'>
+                   <li><b>Birthday: </b>28 March 2006</li>
+                   <li><b>Phone: </b>03465483006</li>
+                   <li><b>City: </b>Rawalpindi, Pakistan</li>
+                   <li><b>E-mail:</b> abdullahkhaled20006@gmail.com</li>
+                 </ul>
+           </div>
+           
+           </div>
+           </div>
+        </section>
+       <section>
+        <div class='footer'>
+            <h2>Abdullah Khalid</h2>
+            <h2>UI Developer, Frontend Developer, Freelancer</h2>
+            <p>© All Rights Reserved.</p>
         </div>
+       </section>
     </body>
 </html>
