@@ -1,101 +1,645 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="A portfolio showcasing projects built with HTML, CSS, and JavaScript.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-      
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A portfolio showcasing projects built with HTML, CSS, and JavaScript.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Abdullah Khalid - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            <div class='header'>
-                <h2>Abdullah Khalid</h2>
-                <div>
-                  <ul class="ul">
-                    <li class="li"><a href="#sec1" class='links'>Home</a></li>
-                    <li class="li"><a href="#sec2" class='links'>My Skills</a></li>
-                    <li class="li"><a href="#sec3" class='links'>Projects</a></li>
-                    <li class="li"><a href="#sec4" class='btn'>Hire Me</a></li>
-                  </ul>
-                </div>
-              </div>
-            <section id="sec1">
-                <div class='main'>
-                    <div><img src="bgremoved.png" alt="" class='img' >
-                    </div>
-                    
-                    <div >
-                      <h1 class='heading'>I'm <strong style='color:#3B64B3'>Abdullah Khalid</strong>
-                I am a Front-end
-                Developer.
-               </h1>
-                    </div>
-                  </div>
+        html {
+            scroll-behavior: smooth;
+        }
 
-        </section>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
 
-        <section id="sec2">
-            <div class='outer'>
-                <div class="main-constainer">
-                  <h2>My Expertise</h2>
-                  <ul>
-                    <li><b>HTML: </b>Advanced knowledge in structuring web pages with semantic HTML.</li>
-                    <li><b>JavaScript: </b>Proficient in DOM manipulation, events, and JavaScript frameworks.</li>
-                    <li><b>CSS: </b>Expertise in creating responsive designs, layouts with Flexbox and Grid.</li>
-                    <li><b>React:</b> Skilled in building responsive UIs with Flexbox and Grid.</li>
-                  </ul>
-                </div>
-            </div>
-        </section>
-        <section id="sec3">
-            <div class='block'>
-                <h1 style='color:#3F61BC;font-family:Roboto'>My Projects</h1>
-            <div class='main-outer'>
-                <div class='description'><iframe src="clock.html"></iframe><p class='text'>A digital clock built with HTML, CSS, and JavaScript that displays the current time. It uses basic DOM manipulation and responsive design for a clean, modern look.</p></div>
-                <div class='description'><iframe src="day3.html"></iframe><p class='text'>A CSS animation of a sun setting over a pyramid, with the sun gradually descending behind the pyramid as the background color changes to simulate dusk.</p></div>
-                <div class='description'><iframe src="day2.html"></iframe><p class="text">A menu button that toggles the visibility of a navigation menu using HTML, CSS, and JavaScript.</p></div>
-                <div class='description'><iframe src="day10.html"></iframe><p class="text">A stylish digital clock using HTML, CSS, and JavaScript, with a modern design.</p></div>
-                <div class='description'><iframe src="day5.html"></iframe><p class="text">A simple graph created with HTML, CSS, and JavaScript to visually represent data using bars, lines, or points.</p></div>
-                <div class='description'><iframe src="day7.html"></iframe><p class="text">A simple message UI built with HTML, CSS, and JavaScript for displaying in a clean, interactive layout.</p></div>
-                <div class='description'><iframe src="day6.html"></iframe><p class="text">A simple social media profile UI using HTML, CSS, and JavaScript, featuring a profile picture, bio, and posts in a clean, modern layout.</p></div>
-                <div class='description'><img src="smashTheBug.png" alt="" /><p class="text"><a href="https://abdullahcodingboi.github.io/SmashTheBug/">Smash the bug</a> is an engaging game built with JavaScript, HTML, and CSS where players must click on bugs before they escape!</p></div>
-                <div class='description'><img src="minefiled.png" alt="" /><p class="text">A game called <a href="https://abdullahcodingboi.github.io/MineField/">MineField</a> , and it’s a small puzzle game in which you need to find numbers to score and avoid mines, it is luck-based</p></div>
-                <div class='description'><img src="poptheballoon.png" alt="" /><p class="text"><a href="https://abdullahcodingboi.github.io/PopTheBalloons/">Pop the Balloon</a> ,is a simple interactive game made using JavaScript, HTML, and CSS</p></div>
-                <div class='description'><img src="Screenshot (3).png" alt="" /><p class="text">A simple <a href="https://abdullahcodingboi.github.io/TicTacToe/">TicTacToe</a>  game built with HTML, CSS and JavaScript</p></div>
-                <div class='description'><img src="calc.png" alt="" /><p>A simple <a href="https://abdullahcodingboi.github.io/Calculator/">calculator </a> built with JavaScript, HTML, and CSS</p></div>
-                <div class='description'><img src="desktop-design.jpg" alt="" /><p class="text">A simple static <a href="https://abdullahcodingboi.github.io/Recipe-page/">recipe page </a> built with HTML, and CSS</p></div>
-            </div>
-          </div>
-        </section>
-        <section id="sec4">
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .header h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.5rem;
+        }
+
+        .ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .li {
+            transition: transform 0.3s ease;
+        }
+
+        .li:hover {
+            transform: translateY(-2px);
+        }
+
+        .links {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .links:hover {
+            color: var(--primary-color);
+        }
+
+        .links::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+
+        .links:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Hero Section */
+        #sec1 {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 6rem 2rem 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .img {
+            width: 100%;
+            max-width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s ease;
+            background: var(--gradient-primary);
+        }
+
+        .img:hover {
+            transform: scale(1.05);
+        }
+
+        .heading {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Skills Section */
+        #sec2 {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .outer {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-container {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .main-container h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .skills-grid li {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .skills-grid li:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            background: white;
+        }
+
+        .skills-grid b {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Projects Section */
+        #sec3 {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .block h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 4rem;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .main-outer {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .description {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .description:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        iframe, .description img {
+            width: 100%;
+            height: 250px;
+            border: none;
+            object-fit: cover;
+        }
+
+        .text {
+            padding: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-light);
+        }
+
+        .text a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .text a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Contact Section */
+        #sec4 {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .contact-container {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .contact-container h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .contact-grid li {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .contact-grid li:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-grid b {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .footer h2:first-child {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer h2:last-of-type {
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .ul {
+                gap: 1rem;
+            }
+
+            .main {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .heading {
+                font-size: 2rem;
+            }
+
+            .main-outer {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #sec1 {
+                padding-top: 8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-outer {
+                grid-template-columns: 1fr;
+            }
+            
+            .description {
+                min-width: auto;
+            }
+            
+            .heading {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Scroll animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class='header'>
+        <h2>Abdullah Khalid</h2>
+        <div>
+            <ul class="ul">
+                <li class="li"><a href="#sec1" class='links'>Home</a></li>
+                <li class="li"><a href="#sec2" class='links'>Skills</a></li>
+                <li class="li"><a href="#sec3" class='links'>Projects</a></li>
+                <li class="li"><a href="#sec4" class='btn'>Hire Me</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section id="sec1">
+        <div class='main'>
             <div>
-                <div class='outer' style='margin-top:30px'>
-               <div class="main-constainer" style='min-width:50%'>
-                 <h2 style='color:#2151B1'>PERSONAL DETAILS</h2>
-                 <ul style='display:flex;flex-direction:column;gap:10px'>
-                   <li><b>Birthday: </b>28 March 2006</li>
-                   <li><b>Phone: </b>03465483006</li>
-                   <li><b>City: </b>Rawalpindi, Pakistan</li>
-                   <li><b>E-mail:</b> abdullahkhaled20006@gmail.com</li>
-                 </ul>
-           </div>
-           
-           </div>
-           </div>
-        </section>
-       <section>
+                <img src="bgremoved.png" alt="Abdullah Khalid" class='img'>
+            </div>
+            <div>
+                <h1 class='heading'>
+                    I'm <span class="highlight">Abdullah Khalid</span><br>
+                    I am a Front-end<br>
+                    Developer.
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec2">
+        <div class='outer'>
+            <div class="main-container">
+                <h2>My Expertise</h2>
+                <ul class="skills-grid">
+                    <li><b>HTML:</b> Advanced knowledge in structuring web pages with semantic HTML and modern best practices.</li>
+                    <li><b>CSS:</b> Expertise in creating responsive designs, layouts with Flexbox and Grid, and modern CSS features.</li>
+                    <li><b>JavaScript:</b> Proficient in DOM manipulation, events, ES6+, and modern JavaScript frameworks.</li>
+                    <li><b>React:</b> Skilled in building dynamic, responsive UIs with React hooks and component architecture.</li>
+                    <li><b>Firebase:</b> Experience with Firebase authentication, real-time database, and cloud functions.</li>
+                    <li><b>Node.js:</b> Backend development with Node.js, Express, and server-side JavaScript.</li>
+                    <li><b>MongoDB:</b> Database design and management with MongoDB and NoSQL principles.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec3">
+        <div class='block'>
+            <h1>My Projects</h1>
+            <div class='main-outer'>
+                <div class='description'>
+                    <img src='vista.png' class="project-image">
+                    <p class='text'>
+                        <a href="https://vista-hrms.netlify.app/" target="_blank">Vista HRMS</a> - A comprehensive HR management system dashboard with employee management, payroll, and analytics features built with modern web technologies.
+                    </p>
+                </div>
+                
+                <div class='description'>
+                     <img src='seeqlo.png' class="project-image">
+                    <p class='text'>
+                        <a href="https://seeqlo.com" target="_blank">Seeqlo</a> - A modern educational app that harnesses AI to provide personalized learning experiences and intelligent tutoring for students.
+                    </p>
+                </div>
+
+                <div class='description'>
+                    <iframe src="clock.html"></iframe>
+                    <p class='text'>A digital clock built with HTML, CSS, and JavaScript that displays the current time with responsive design and modern aesthetics.</p>
+                </div>
+
+                <div class='description'>
+                    <iframe src="day3.html"></iframe>
+                    <p class='text'>A CSS animation of a sun setting over a pyramid, with smooth transitions and color changes to simulate dusk.</p>
+                </div>
+
+                <div class='description'>
+                    <iframe src="day2.html"></iframe>
+                    <p class="text">An animated menu button that toggles navigation visibility with smooth transitions using HTML, CSS, and JavaScript.</p>
+                </div>
+
+                <div class='description'>
+                    <iframe src="day10.html"></iframe>
+                    <p class="text">A stylish digital clock with modern design elements and real-time updates using JavaScript.</p>
+                </div>
+
+                <div class='description'>
+                    <iframe src="day5.html"></iframe>
+                    <p class="text">An interactive data visualization tool created with HTML, CSS, and JavaScript for displaying charts and graphs.</p>
+                </div>
+
+                <div class='description'>
+                    <iframe src="day7.html"></iframe>
+                    <p class="text">A clean and modern messaging UI interface built with HTML, CSS, and JavaScript for chat applications.</p>
+                </div>
+
+                <div class='description'>
+                    <iframe src="day6.html"></iframe>
+                    <p class="text">A responsive social media profile interface featuring user information, posts, and interactions in a modern layout.</p>
+                </div>
+
+                <div class='description'>
+                    <img src="smashTheBug.png" alt="Smash the Bug Game" />
+                    <p class="text">
+                        <a href="https://abdullahcodingboi.github.io/SmashTheBug/" target="_blank">Smash the Bug</a> - An engaging interactive game where players click on bugs before they escape, built with JavaScript, HTML, and CSS.
+                    </p>
+                </div>
+
+                <div class='description'>
+                    <img src="minefiled.png" alt="MineField Game" />
+                    <p class="text">
+                        <a href="https://abdullahcodingboi.github.io/MineField/" target="_blank">MineField</a> - A strategic puzzle game where players find numbers to score while avoiding mines in this luck-based challenge.
+                    </p>
+                </div>
+
+                <div class='description'>
+                    <img src="poptheballoon.png" alt="Pop the Balloon Game" />
+                    <p class="text">
+                        <a href="https://abdullahcodingboi.github.io/PopTheBalloons/" target="_blank">Pop the Balloon</a> - A fun interactive game with smooth animations made using JavaScript, HTML, and CSS.
+                    </p>
+                </div>
+
+                <div class='description'>
+                    <img src="Screenshot (3).png" alt="TicTacToe Game" />
+                    <p class="text">
+                        <a href="https://abdullahcodingboi.github.io/TicTacToe/" target="_blank">TicTacToe</a> - A classic game implementation with clean UI and game logic built with HTML, CSS, and JavaScript.
+                    </p>
+                </div>
+
+                <div class='description'>
+                    <img src="calc.png" alt="Calculator App" />
+                    <p class="text">
+                        <a href="https://abdullahcodingboi.github.io/Calculator/" target="_blank">Calculator</a> - A functional calculator with modern design and mathematical operations using JavaScript, HTML, and CSS.
+                    </p>
+                </div>
+
+                <div class='description'>
+                    <img src="desktop-design.jpg" alt="Recipe Page" />
+                    <p class="text">
+                        <a href="https://abdullahcodingboi.github.io/Recipe-page/" target="_blank">Recipe Page</a> - A beautifully designed static recipe page showcasing modern CSS layouts and typography.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec4">
+        <div class='outer'>
+            <div class="contact-container">
+                <h2>PERSONAL DETAILS</h2>
+                <ul class="contact-grid">
+                    <li><b>Birthday:</b> 28 March 2006</li>
+                    <li><b>Phone:</b> 03465483006</li>
+                    <li><b>City:</b> Rawalpindi, Pakistan</li>
+                    <li><b>E-mail:</b> abdullahkhaled20006@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
         <div class='footer'>
             <h2>Abdullah Khalid</h2>
             <h2>UI Developer, Frontend Developer, Freelancer</h2>
-            <p>© All Rights Reserved.</p>
+            <p>© 2025 All Rights Reserved.</p>
         </div>
-       </section>
-    </body>
+    </section>
+
+    <script>
+        // Smooth scroll behavior for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background opacity on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
 </html>
