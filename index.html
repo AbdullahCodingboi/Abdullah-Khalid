@@ -8,7 +8,7 @@
     <title>Abdullah Khalid - Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -21,25 +21,26 @@
         }
 
         :root {
-            --primary-color: #667eea;
-            --secondary-color: #764ba2;
-            --accent-color: #f093fb;
-            --text-dark: #2d3748;
-            --text-light: #718096;
-            --bg-light: #f7fafc;
-            --bg-white: #ffffff;
-            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --primary-color: #1a1a1a;
+            --accent-color: #3b82f6;
+            --text-primary: #1a1a1a;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --border-light: #e5e7eb;
+            --border-medium: #d1d5db;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
         }
 
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            background: var(--bg-light);
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            font-size: 16px;
         }
 
         /* Header Styles */
@@ -51,22 +52,31 @@
             z-index: 1000;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
             transition: all 0.3s ease;
         }
 
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .header h2 {
-            font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            background: var(--gradient-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            letter-spacing: -0.025em;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
 
         .ul {
@@ -77,34 +87,31 @@
         }
 
         .li {
-            transition: transform 0.3s ease;
-        }
-
-        .li:hover {
-            transform: translateY(-2px);
+            transition: transform 0.2s ease;
         }
 
         .links {
-            color: var(--text-dark);
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.875rem;
             position: relative;
-            transition: color 0.3s ease;
+            transition: color 0.2s ease;
         }
 
         .links:hover {
-            color: var(--primary-color);
+            color: var(--text-primary);
         }
 
         .links::after {
             content: '';
             position: absolute;
             width: 0;
-            height: 2px;
-            bottom: -5px;
+            height: 1px;
+            bottom: -4px;
             left: 0;
-            background: var(--gradient-primary);
-            transition: width 0.3s ease;
+            background: var(--accent-color);
+            transition: width 0.2s ease;
         }
 
         .links:hover::after {
@@ -112,19 +119,33 @@
         }
 
         .btn {
-            padding: 0.75rem 1.5rem;
-            background: var(--gradient-primary);
+            padding: 0.5rem 1rem;
+            background: var(--primary-color);
             color: white;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 6px;
             font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-md);
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+            background: var(--accent-color);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--border-medium);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-secondary);
+            color: var(--primary-color);
         }
 
         /* Hero Section */
@@ -133,7 +154,7 @@
             display: flex;
             align-items: center;
             padding: 6rem 2rem 2rem;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: var(--bg-primary);
         }
 
         .main {
@@ -141,44 +162,53 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 6rem;
             align-items: center;
         }
 
         .img {
             width: 100%;
-            max-width: 350px;
-            height: 350px;
-            border-radius: 50%;
+            max-width: 300px;
+            height: 300px;
+            border-radius: 12px;
             object-fit: cover;
             box-shadow: var(--shadow-lg);
             transition: transform 0.3s ease;
-            background: var(--gradient-primary);
+            background: var(--bg-secondary);
         }
 
         .img:hover {
-            transform: scale(1.05);
+            transform: translateY(-4px);
+        }
+
+        .hero-content {
+            max-width: 500px;
         }
 
         .heading {
-            font-family: 'Poppins', sans-serif;
             font-size: 3rem;
             font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.025em;
+            color: var(--primary-color);
         }
 
         .highlight {
-            background: var(--gradient-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--accent-color);
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
         }
 
         /* Skills Section */
         #sec2 {
             padding: 6rem 2rem;
-            background: white;
+            background: var(--bg-secondary);
         }
 
         .outer {
@@ -186,68 +216,62 @@
             margin: 0 auto;
         }
 
-        .main-container {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .main-container h2 {
-            font-family: 'Poppins', sans-serif;
+        .section-title {
             font-size: 2.5rem;
-            font-weight: 600;
+            font-weight: 700;
             text-align: center;
             margin-bottom: 3rem;
-            background: var(--gradient-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--primary-color);
+            letter-spacing: -0.025em;
+        }
+
+        .main-container {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
             list-style: none;
         }
 
         .skills-grid li {
-            background: var(--bg-light);
+            background: var(--bg-secondary);
             padding: 1.5rem;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(102, 126, 234, 0.1);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-light);
         }
 
         .skills-grid li:hover {
-            transform: translateY(-5px);
+            transform: translateY(-2px);
             box-shadow: var(--shadow-md);
-            background: white;
+            background: var(--bg-primary);
         }
 
         .skills-grid b {
             color: var(--primary-color);
             font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+        }
+
+        .skills-grid li p {
+            margin-top: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
         }
 
         /* Projects Section */
         #sec3 {
             padding: 6rem 2rem;
-            background: var(--bg-light);
-        }
-
-        .block h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 4rem;
-            background: var(--gradient-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            background: var(--bg-primary);
         }
 
         .main-outer {
@@ -259,28 +283,28 @@
         }
 
         .description {
-            background: white;
-            border-radius: 20px;
+            background: var(--bg-primary);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-sm);
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid var(--border-light);
         }
 
         .description:hover {
-            transform: translateY(-10px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
         }
 
         .project-image {
             width: 100%;
             height: 250px;
-            background: var(--gradient-primary);
+            background: var(--bg-secondary);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-size: 1rem;
             font-weight: 500;
         }
 
@@ -293,44 +317,43 @@
 
         .text {
             padding: 1.5rem;
-            font-size: 0.95rem;
+            font-size: 0.875rem;
             line-height: 1.6;
-            color: var(--text-light);
+            color: var(--text-secondary);
         }
 
         .text a {
-            color: var(--primary-color);
+            color: var(--accent-color);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: color 0.2s ease;
         }
 
         .text a:hover {
-            color: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: underline;
         }
 
         /* Contact Section */
         #sec4 {
             padding: 6rem 2rem;
-            background: white;
+            background: var(--bg-secondary);
         }
 
         .contact-container {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-            border-radius: 20px;
+            background: var(--bg-primary);
+            border-radius: 12px;
             padding: 3rem;
-            border: 1px solid rgba(102, 126, 234, 0.2);
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
         }
 
         .contact-container h2 {
-            font-family: 'Poppins', sans-serif;
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 2rem;
-            background: var(--gradient-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--primary-color);
+            letter-spacing: -0.025em;
         }
 
         .contact-grid {
@@ -341,70 +364,117 @@
         }
 
         .contact-grid li {
-            background: white;
-            padding: 1rem 1.5rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.3s ease;
+            background: var(--bg-secondary);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            transition: all 0.2s ease;
         }
 
         .contact-grid li:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
         }
 
         .contact-grid b {
             color: var(--primary-color);
             font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+        }
+
+        .contact-grid li p {
+            margin-top: 0.25rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
         }
 
         /* Footer */
         .footer {
-            background: var(--gradient-primary);
+            background: var(--primary-color);
             color: white;
             text-align: center;
             padding: 3rem 2rem;
         }
 
         .footer h2:first-child {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
         }
 
         .footer h2:last-of-type {
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 400;
-            opacity: 0.9;
+            opacity: 0.8;
             margin-bottom: 1rem;
         }
 
         .footer p {
-            opacity: 0.8;
-            font-size: 0.9rem;
+            opacity: 0.6;
+            font-size: 0.875rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.25rem;
+            cursor: pointer;
+            color: var(--primary-color);
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .nav-container {
                 gap: 1rem;
-                padding: 1rem;
             }
 
             .ul {
-                gap: 1rem;
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-primary);
+                border-top: 1px solid var(--border-light);
+                flex-direction: column;
+                padding: 1rem 0;
+                gap: 0;
+            }
+
+            .ul.active {
+                display: flex;
+            }
+
+            .ul li {
+                padding: 0.75rem 2rem;
+                width: 100%;
+            }
+
+            .mobile-menu-btn {
+                display: block;
             }
 
             .main {
                 grid-template-columns: 1fr;
                 text-align: center;
-                gap: 2rem;
+                gap: 3rem;
             }
 
             .heading {
-                font-size: 2rem;
+                font-size: 2.5rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
             }
 
             .main-outer {
@@ -418,49 +488,79 @@
             #sec1 {
                 padding-top: 8rem;
             }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .main-container {
+                padding: 2rem;
+            }
+
+            .contact-container {
+                padding: 2rem;
+            }
         }
 
         @media (max-width: 480px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .heading {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .main-container {
+                padding: 1.5rem;
+            }
+
+            .contact-container {
+                padding: 1.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
             .main-outer {
                 grid-template-columns: 1fr;
-            }
-            
-            .description {
-                min-width: auto;
-            }
-            
-            .heading {
-                font-size: 1.5rem;
+                gap: 1.5rem;
             }
         }
 
-        /* Scroll animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
         }
 
-        .animate-fade-in {
-            animation: fadeInUp 0.6s ease-out;
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
     <div class='header'>
-        <h2>Abdullah Khalid</h2>
-        <div>
-            <ul class="ul">
-                <li class="li"><a href="#sec1" class='links'>Home</a></li>
-                <li class="li"><a href="#sec2" class='links'>Skills</a></li>
-                <li class="li"><a href="#sec3" class='links'>Projects</a></li>
-                <li class="li"><a href="#sec4" class='btn'>Hire Me</a></li>
-            </ul>
+        <div class="header-content">
+            <h2>Abdullah Khalid</h2>
+            <div class="nav-container">
+                <ul class="ul" id="navMenu">
+                    <li class="li"><a href="#sec1" class='links'>Home</a></li>
+                    <li class="li"><a href="#sec2" class='links'>Skills</a></li>
+                    <li class="li"><a href="#sec3" class='links'>Projects</a></li>
+                    <li class="li"><a href="#sec4" class='links'>Contact</a></li>
+                </ul>
+                <button class='btn btn-secondary' onclick="downloadCV()">Download CV</button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            </div>
         </div>
     </div>
 
@@ -469,126 +569,110 @@
             <div>
                 <img src="bgremoved.png" alt="Abdullah Khalid" class='img'>
             </div>
-            <div>
+            <div class="hero-content">
                 <h1 class='heading'>
                     I'm <span class="highlight">Abdullah Khalid</span><br>
-                    I am a Front-end<br>
-                    Developer.
+                    Frontend Developer
                 </h1>
+                <p class="hero-description">
+                    I create modern, responsive web applications with clean code and exceptional user experiences. Passionate about turning ideas into digital reality.
+                </p>
+                <a href="#sec4" class='btn'>Get In Touch</a>
             </div>
         </div>
     </section>
 
     <section id="sec2">
         <div class='outer'>
+            <h2 class="section-title">My Expertise</h2>
             <div class="main-container">
-                <h2>My Expertise</h2>
                 <ul class="skills-grid">
-                    <li><b>HTML:</b> Advanced knowledge in structuring web pages with semantic HTML and modern best practices.</li>
-                    <li><b>CSS:</b> Expertise in creating responsive designs, layouts with Flexbox and Grid, and modern CSS features.</li>
-                    <li><b>JavaScript:</b> Proficient in DOM manipulation, events, ES6+, and modern JavaScript frameworks.</li>
-                    <li><b>React:</b> Skilled in building dynamic, responsive UIs with React hooks and component architecture.</li>
-                    <li><b>Firebase:</b> Experience with Firebase authentication, real-time database, and cloud functions.</li>
-                    <li><b>Node.js:</b> Backend development with Node.js, Express, and server-side JavaScript.</li>
-                    <li><b>MongoDB:</b> Database design and management with MongoDB and NoSQL principles.</li>
+                    <li>
+                        <b>HTML</b>
+                        <p>Advanced knowledge in structuring web pages with semantic HTML and modern best practices.</p>
+                    </li>
+                    <li>
+                        <b>CSS</b>
+                        <p>Expertise in creating responsive designs, layouts with Flexbox and Grid, and modern CSS features.</p>
+                    </li>
+                    <li>
+                        <b>JavaScript</b>
+                        <p>Proficient in DOM manipulation, events, ES6+, and modern JavaScript frameworks.</p>
+                    </li>
+                    <li>
+                        <b>React</b>
+                        <p>Skilled in building dynamic, responsive UIs with React hooks and component architecture.</p>
+                    </li>
+                    <li>
+                        <b>Firebase</b>
+                        <p>Experience with Firebase authentication, real-time database, and cloud functions.</p>
+                    </li>
+                    <li>
+                        <b>Node.js</b>
+                        <p>Backend development with Node.js, Express, and server-side JavaScript.</p>
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section id="sec3">
-        <div class='block'>
-            <h1>My Projects</h1>
+        <div class='outer'>
+            <h2 class="section-title">Featured Projects</h2>
             <div class='main-outer'>
                 <div class='description'>
-                    <img src='vista.png' class="project-image">
-                    <p class='text'>
+                    <img src='vista.png' class="project-image" alt="Vista HRMS">
+                    <div class='text'>
                         <a href="https://vista-hrms.netlify.app/" target="_blank">Vista HRMS</a> - A comprehensive HR management system dashboard with employee management, payroll, and analytics features built with modern web technologies.
-                    </p>
+                    </div>
                 </div>
                 
                 <div class='description'>
-                     <img src='seeqlo.png' class="project-image">
-                    <p class='text'>
+                     <img src='seeqlo.png' class="project-image" alt="Seeqlo">
+                    <div class='text'>
                         <a href="https://seeqlo.com" target="_blank">Seeqlo</a> - A modern educational app that harnesses AI to provide personalized learning experiences and intelligent tutoring for students.
-                    </p>
+                    </div>
                 </div>
 
                 <div class='description'>
-                    <iframe src="clock.html"></iframe>
-                    <p class='text'>A digital clock built with HTML, CSS, and JavaScript that displays the current time with responsive design and modern aesthetics.</p>
+                    <iframe src="clock.html" title="Digital Clock"></iframe>
+                    <div class='text'>A digital clock built with HTML, CSS, and JavaScript that displays the current time with responsive design and modern aesthetics.</div>
                 </div>
 
                 <div class='description'>
-                    <iframe src="day3.html"></iframe>
-                    <p class='text'>A CSS animation of a sun setting over a pyramid, with smooth transitions and color changes to simulate dusk.</p>
+                    <iframe src="day3.html" title="Sunset Animation"></iframe>
+                    <div class='text'>A CSS animation of a sun setting over a pyramid, with smooth transitions and color changes to simulate dusk.</div>
                 </div>
 
                 <div class='description'>
-                    <iframe src="day2.html"></iframe>
-                    <p class="text">An animated menu button that toggles navigation visibility with smooth transitions using HTML, CSS, and JavaScript.</p>
+                    <iframe src="day2.html" title="Animated Menu"></iframe>
+                    <div class="text">An animated menu button that toggles navigation visibility with smooth transitions using HTML, CSS, and JavaScript.</div>
                 </div>
 
                 <div class='description'>
-                    <iframe src="day10.html"></iframe>
-                    <p class="text">A stylish digital clock with modern design elements and real-time updates using JavaScript.</p>
-                </div>
-
-                <div class='description'>
-                    <iframe src="day5.html"></iframe>
-                    <p class="text">An interactive data visualization tool created with HTML, CSS, and JavaScript for displaying charts and graphs.</p>
-                </div>
-
-                <div class='description'>
-                    <iframe src="day7.html"></iframe>
-                    <p class="text">A clean and modern messaging UI interface built with HTML, CSS, and JavaScript for chat applications.</p>
-                </div>
-
-                <div class='description'>
-                    <iframe src="day6.html"></iframe>
-                    <p class="text">A responsive social media profile interface featuring user information, posts, and interactions in a modern layout.</p>
+                    <iframe src="day10.html" title="Stylish Clock"></iframe>
+                    <div class="text">A stylish digital clock with modern design elements and real-time updates using JavaScript.</div>
                 </div>
 
                 <div class='description'>
                     <img src="smashTheBug.png" alt="Smash the Bug Game" />
-                    <p class="text">
+                    <div class="text">
                         <a href="https://abdullahcodingboi.github.io/SmashTheBug/" target="_blank">Smash the Bug</a> - An engaging interactive game where players click on bugs before they escape, built with JavaScript, HTML, and CSS.
-                    </p>
+                    </div>
                 </div>
 
                 <div class='description'>
                     <img src="minefiled.png" alt="MineField Game" />
-                    <p class="text">
+                    <div class="text">
                         <a href="https://abdullahcodingboi.github.io/MineField/" target="_blank">MineField</a> - A strategic puzzle game where players find numbers to score while avoiding mines in this luck-based challenge.
-                    </p>
-                </div>
-
-                <div class='description'>
-                    <img src="poptheballoon.png" alt="Pop the Balloon Game" />
-                    <p class="text">
-                        <a href="https://abdullahcodingboi.github.io/PopTheBalloons/" target="_blank">Pop the Balloon</a> - A fun interactive game with smooth animations made using JavaScript, HTML, and CSS.
-                    </p>
-                </div>
-
-                <div class='description'>
-                    <img src="Screenshot (3).png" alt="TicTacToe Game" />
-                    <p class="text">
-                        <a href="https://abdullahcodingboi.github.io/TicTacToe/" target="_blank">TicTacToe</a> - A classic game implementation with clean UI and game logic built with HTML, CSS, and JavaScript.
-                    </p>
+                    </div>
                 </div>
 
                 <div class='description'>
                     <img src="calc.png" alt="Calculator App" />
-                    <p class="text">
+                    <div class="text">
                         <a href="https://abdullahcodingboi.github.io/Calculator/" target="_blank">Calculator</a> - A functional calculator with modern design and mathematical operations using JavaScript, HTML, and CSS.
-                    </p>
-                </div>
-
-                <div class='description'>
-                    <img src="desktop-design.jpg" alt="Recipe Page" />
-                    <p class="text">
-                        <a href="https://abdullahcodingboi.github.io/Recipe-page/" target="_blank">Recipe Page</a> - A beautifully designed static recipe page showcasing modern CSS layouts and typography.
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -597,12 +681,24 @@
     <section id="sec4">
         <div class='outer'>
             <div class="contact-container">
-                <h2>PERSONAL DETAILS</h2>
+                <h2>Let's Connect</h2>
                 <ul class="contact-grid">
-                    <li><b>Birthday:</b> 28 March 2006</li>
-<!--                     <li><b>Phone:</b> 03465483006</li> -->
-                    <li><b>City:</b> Rawalpindi, Pakistan</li>
-                    <li><b>Email:</b>abdullahkhaled20006@gmail.com</li>
+                    <li>
+                        <b>Birthday</b>
+                        <p>28 March 2006</p>
+                    </li>
+                    <li>
+                        <b>Location</b>
+                        <p>Rawalpindi, Pakistan</p>
+                    </li>
+                    <li>
+                        <b>Email</b>
+                        <p>abdullahkhaled20006@gmail.com</p>
+                    </li>
+                    <li>
+                        <b>Status</b>
+                        <p>Available for freelance</p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -611,7 +707,7 @@
     <section>
         <div class='footer'>
             <h2>Abdullah Khalid</h2>
-            <h2>UI Developer, Frontend Developer, Freelancer</h2>
+            <h2>Frontend Developer & UI Specialist</h2>
             <p>© 2025 All Rights Reserved.</p>
         </div>
     </section>
@@ -628,6 +724,8 @@
                         block: 'start'
                     });
                 }
+                // Close mobile menu if open
+                document.getElementById('navMenu').classList.remove('active');
             });
         });
 
@@ -636,8 +734,52 @@
             const header = document.querySelector('.header');
             if (window.scrollY > 100) {
                 header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px 0 rgb(0 0 0 / 0.06)';
             } else {
                 header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // CV Download functionality
+        function downloadCV() {
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = '/Abdullah-Khalid.pdf'; // Path to your CV file
+            link.download = 'Abdullah_Khalid_CV.pdf'; // Filename for download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Fade in animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!navMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                navMenu.classList.remove('active');
             }
         });
     </script>
