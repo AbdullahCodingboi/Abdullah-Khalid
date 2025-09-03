@@ -94,88 +94,81 @@ img{
     background-color: red;
   
 } */
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-    background: linear-gradient(to right, red, yellow); /* Horizontal gradient from red to yellow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, red, yellow);
+  overflow:hidden;
 }
 
-
-
-/* .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 315px; /* Reduced size 
-    width: 315px;  
-    border-radius: 50%;
-    background-color: maroon;
-} */
-
 .inner-main {
-    border: 5px solid maroon;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 290px; /* Reduced size */
-    width: 290px; /* Reduced size */
-    border-radius: 50%;
-    background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vmin;  /* square, scales with screen */
+  height: 80vmin;
+  border-radius: 50%;
+  background-color: white;
+  border: 0.8vmin solid maroon;
 }
 
 .center {
-    height: 10px; /* Reduced size */
-    width: 10px; /* Reduced size */
-    border-radius: 50%;
-    background-color: maroon;
-    transform: translateX(80px); /* Adjusted to fit inside smaller clock */
+  width: 2vmin;
+  height: 2vmin;
+  border-radius: 50%;
+  background-color: maroon;
 }
 
+/* numbers */
 .number {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px; /* Reduced font size */
+  position: absolute;
+  font-size: 5vmin; /* scales with screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0; /* let us use transform relative to center */
+  margin: auto;
 }
 
-.number:nth-child(1) { transform: rotate(0deg) translate(125px) rotate(0deg); } 
-.number:nth-child(2) { transform: rotate(30deg) translate(125px) rotate(-30deg); }
-.number:nth-child(3) { transform: rotate(60deg) translate(125px) rotate(-60deg); } 
-.number:nth-child(4) { transform: rotate(90deg) translate(125px) rotate(-90deg); } 
-.number:nth-child(5) { transform: rotate(120deg) translate(125px) rotate(-120deg); } 
-.number:nth-child(6) { transform: rotate(150deg) translate(125px) rotate(-150deg); } 
-.number:nth-child(7) { transform: rotate(180deg) translate(125px) rotate(-180deg); } 
-.number:nth-child(8) { transform: rotate(210deg) translate(125px) rotate(-210deg); } 
-.number:nth-child(9) { transform: rotate(240deg) translate(125px) rotate(-240deg); } 
-.number:nth-child(10) { transform: rotate(270deg) translate(125px) rotate(-270deg); } 
-.number:nth-child(11) { transform: rotate(300deg) translate(125px) rotate(-300deg); } 
-.number:nth-child(12) { transform: rotate(330deg) translate(125px) rotate(-330deg); }
+/* push numbers outward with translateY */
+.number:nth-child(1)  { transform: rotate(0deg)   translateY(-35vmin) rotate(-0deg); }
+.number:nth-child(2)  { transform: rotate(30deg)  translateY(-35vmin) rotate(-30deg); }
+.number:nth-child(3)  { transform: rotate(60deg)  translateY(-35vmin) rotate(-60deg); }
+.number:nth-child(4)  { transform: rotate(90deg)  translateY(-35vmin) rotate(-90deg); }
+.number:nth-child(5)  { transform: rotate(120deg) translateY(-35vmin) rotate(-120deg); }
+.number:nth-child(6)  { transform: rotate(150deg) translateY(-35vmin) rotate(-150deg); }
+.number:nth-child(7)  { transform: rotate(180deg) translateY(-35vmin) rotate(-180deg); }
+.number:nth-child(8)  { transform: rotate(210deg) translateY(-35vmin) rotate(-210deg); }
+.number:nth-child(9)  { transform: rotate(240deg) translateY(-35vmin) rotate(-240deg); }
+.number:nth-child(10) { transform: rotate(270deg) translateY(-35vmin) rotate(-270deg); }
+.number:nth-child(11) { transform: rotate(300deg) translateY(-35vmin) rotate(-300deg); }
+.number:nth-child(12) { transform: rotate(330deg) translateY(-35vmin) rotate(-330deg); }
 
+/* hands */
 .hand {
-    position: absolute;
-    bottom: 50%;
-    left: 49%;
-    transform-origin: bottom;
-    background-color: maroon;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  background-color: maroon;
 }
 
 .hour {
-    width: 6px; /* Reduced size */
-    height: 85px; /* Reduced size */
+  width: 1vmin;
+  height: 20vmin;
 }
 
 .minute {
-    width: 4px; /* Reduced size */
-    height: 120px; /* Reduced size */
+  width: 0.8vmin;
+  height: 28vmin;
 }
 
 .second {
-    width: 2px; /* Reduced size */
-    height: 130px; /* Reduced size */
-    background-color: red;
+  width: 0.4vmin;
+  height: 32vmin;
+  background-color: red;
 }
